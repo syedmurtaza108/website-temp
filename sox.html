@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Tekk Solutions</title>
+    <link rel="stylesheet" href="./css/careers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="./images/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_prpDd3Z4cgVFqzneWnzZJ');
+            console.log('initiated')
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log('hello');
+                // these IDs from the previous steps
+                emailjs.send('service_57e0w7z','template_mmbi0ip',{
+                    'from_name': this.name.value,
+        'message': 'This message is for applying job',
+        'from_phone': this.phone.value,
+        'from_email': this.email.value,
+                }, 'user_prpDd3Z4cgVFqzneWnzZJ')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        alert('Job application has been sent successfully.')
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="./images/image.png" alt=""></a>
+        <div class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html#home">home</a></li>
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="index.html#service">services</a></li>
+                <li><a href="index.html#portfolio">portfolio</a></li>
+                <li><a href="index.html#team">team</a></li>
+                <li><a href="careers.html">career</a></li>
+                <li><a href="index.html#contact">contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <h2>Home / SOX</h2>
+    </section>
+
+    
+    <section id="career-heading" class="career-heading" style="padding: 32px; text-align: justify;" >
+        <h1 class="heading" style="text-align: center;">SOX Compliance Services</h1>
+        <br >
+        <br >
+        <p >Compliance with the Sarbanes-Oxley Act (SOX) is essential for any publicly traded company, as it ensures the integrity of financial reporting and strengthens the accountability of corporate governance. Enacted to protect investors from fraudulent financial practices, SOX mandates stringent internal controls, accurate financial disclosures, and strict reporting requirements. Failure to comply with SOX can lead to severe penalties, damaged reputations, and lost investor confidence. Our SOX Compliance Services are designed to help your organization navigate these complexities, ensuring you meet regulatory requirements while safeguarding your financial systems and data.
+            <p>Our comprehensive SOX services provide the necessary expertise to ensure compliance with the Sarbanes-Oxley Act, minimize financial risks, and promote transparency in your financial operations. Below is an in-depth look at the key components of our services:</p></p>
+            <br>
+            <br>
+            <h1> SOX Compliance Audits</h1>
+            <br>
+            <br>
+            <p>The cornerstone of SOX compliance is the thorough auditing of financial statements and internal controls. Our SOX Compliance Audits provide a comprehensive review of your organization’s financial reporting processes to ensure full adherence to SOX regulations. Our audit process involves assessing your current internal controls, financial data accuracy, and the security measures in place to protect sensitive financial information. We focus on key areas such as documentation of financial transactions, approval processes, and data integrity, ensuring that your organization meets all SOX compliance requirements. Our expert auditors identify any gaps or deficiencies in your compliance efforts and provide actionable recommendations to address them, ensuring your financial practices are transparent and reliable.</p>
+            <br>
+            <br>
+            <h1>Internal Control Assessments</h1>
+            <br>
+            <br>
+            <p>Robust internal controls are a critical requirement for SOX compliance, ensuring the accuracy and reliability of financial reporting. Our Internal Control Assessments evaluate the effectiveness of your current internal control systems, identifying any weaknesses or vulnerabilities that could compromise the integrity of your financial data. We review key processes such as transaction approvals, reconciliations, and segregation of duties to ensure that your organization’s financial activities are properly documented and controlled. If we detect deficiencies in your internal controls, we work closely with your team to implement corrective measures that strengthen your organization’s control environment. This proactive approach helps to minimize errors, fraud, and compliance violations, ensuring the accuracy and reliability of your financial reporting.</p>
+            <br>
+            <br>
+            <h1> Financial Reporting Security</h1>
+            <br>
+            <br>
+            <p>In today’s digital age, the security of financial reporting systems is just as important as the accuracy of the data they generate. Our Financial Reporting Security services focus on implementing security measures that protect your financial data and reporting systems from unauthorized access, manipulation, and tampering. We evaluate your existing security protocols, including user access controls, encryption, and audit trails, to ensure that only authorized personnel can access sensitive financial information. Additionally, we help you implement security measures such as multi-factor authentication (MFA), data encryption, and role-based access controls (RBAC) to safeguard your financial reporting systems from internal and external threats. Our goal is to ensure that your financial data remains accurate, secure, and compliant with SOX requirements.</p>
+            <br>
+            <br>
+            <h1> Risk Management and Mitigation</h1>
+            <br>
+            <br>
+            <p>Identifying and mitigating risks related to financial reporting is a core component of SOX compliance. Our Risk Management and Mitigation services focus on identifying potential risks that could impact your financial reporting processes, such as fraud, data breaches, or operational inefficiencies. We conduct a thorough risk assessment to evaluate both external and internal factors that could compromise your financial data integrity or compliance. Once risks are identified, we develop and implement strategies to mitigate them, such as improving internal controls, enhancing security measures, or redesigning processes. Our approach to risk management is proactive, ensuring that potential threats are addressed before they escalate into compliance violations or financial misstatements.</p>
+            <br>
+            <br>
+            <h1> Continuous Monitoring and Reporting</h1>
+            <br>
+            <br>
+            <p> Maintaining SOX compliance requires ongoing vigilance and monitoring to ensure that financial reporting systems and internal controls remain effective over time. Our Continuous Monitoring and Reporting services provide real-time oversight of your financial processes to detect compliance issues early and prevent potential violations. We implement automated systems that monitor critical financial activities, such as transaction approvals, data entries, and access controls, to ensure that they adhere to established policies and procedures. These systems provide continuous reports on the effectiveness of your internal controls, alerting you to any anomalies or inconsistencies that could jeopardize your compliance efforts. By adopting a continuous monitoring approach, your organization can quickly identify and resolve compliance issues, ensuring long-term adherence to SOX requirements.</p>
+            <br>
+            <br>
+            <h1> Why Choose Our SOX Compliance Services?</h1>
+            <br>
+            <br>
+            <p>Navigating the complexities of SOX compliance can be challenging, but with the right partner, it doesn’t have to be. Our SOX Compliance Services offer a comprehensive and proactive approach to ensure that your organization meets all regulatory requirements while improving the accuracy, reliability, and security of your financial reporting. From conducting detailed compliance audits to implementing advanced security measures and continuous monitoring systems, we provide the expertise and tools necessary to safeguard your business and maintain investor confidence.
+                Our team of compliance experts is well-versed in the intricacies of SOX regulations and can help you design and implement a compliance program that not only meets regulatory requirements but also strengthens your internal controls and financial processes. By partnering with us, you can ensure that your organization is well-prepared to handle the demands of SOX compliance while minimizing risks and maximizing transparency.</p>
+                <br>
+                <br>
+                <p>Contact us today to learn how our SOX Compliance Services can be tailored to meet the unique needs of your organization, ensuring the long-term security and integrity of your financial reporting. Let us help you stay compliant, secure, and focused on growing your business with confidence.</p>
+    </section>
+  
+      <div class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Our services</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Terms & condition</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Privacy policy</a></li>
+                        </ul>
+                    </div>
+  
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Portfolio</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#team">Team</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+  
+                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
+                        <h4>Contact Us</h4>
+                        <p>
+                            **<br>
+                            **<br>
+                            UK <br>
+                            <strong>Phone:</strong> +92 311 8328159<br>
+                            <strong>Email:</strong> info@cybertekksolutions.com<br>
+                        </p>
+  
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
+                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
+                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
+                            <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
+                        </div>
+  
+                    </div>
+  
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Subscription</h4>
+                        <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
+                        <form action="" method="Get">
+                            <input type="email" name="email"><input type="submit"  value="Subscribe">
+                        </form>
+                    </div>
+  
+                </div>
+            </div>
+        </div>
+  
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
+                    Copyright &copy; 2024 Cyber Tekk Solutions. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Company Website</title>
+    <title>Cyber Tekk Solutions</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -17,7 +17,35 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/main.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_prpDd3Z4cgVFqzneWnzZJ');
+            console.log('initiated')
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log('hello');
+                // these IDs from the previous steps
+                emailjs.send('service_57e0w7z','template_mmbi0ip',{
+                    'from_name': this.name.value,
+        'message': this.message.value,
+        'from_phone': this.phone.value,
+        'from_email': this.email.value,
+                }, 'user_prpDd3Z4cgVFqzneWnzZJ')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        alert('Your message has been sent successfully.')
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -39,7 +67,7 @@
 
   <section id="home" class="home">
       <h1>Bring your Business Online</h1>
-      <h2>with IT Company Services</h2>
+      <h2>with Cyber Tekk Solutions</h2>
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
@@ -74,7 +102,7 @@
         <div class="col-lg-4 col-sm-6">
           <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-android"></i></span>
             <h6>Mobile App Development</h6>
-            <p>We Have Expertise In Creating Multi-Platform Mobile App Solutions For Both Android And IOS Devices. Using PhoneGap, Xamarin, And React Native, We Offer Custom Mobile App That Runs Smoothly On Multiple Platforms.</p>
+            <p>We Have Expertise In Creating Multi-Platform Mobile App Solutions For Both Android And IOS Devices. Using Flutter, Xamarin, And React Native, We Offer Custom Mobile App That Runs Smoothly On Multiple Platforms.</p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6">
@@ -82,6 +110,12 @@
             <h6>Digital Marketing</h6>
             <p>The digital marketing services that we provide have their own set of charms. By taking our digital marketing services, our clients will be able to increase visibility and engage with their customers at the online platform.</p>
           </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a href="./sox.html"><div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
+            <h6>SOX Compliance Services</h6>
+            <p>Our comprehensive SOX services provide the necessary expertise to ensure compliance with the Sarbanes-Oxley Act, minimize financial risks, and promote transparency in your financial operations.</p>
+          </div></a>
         </div>
       </div>
     </div>
@@ -94,22 +128,22 @@
     <div class="container">
         <div>
             <i class="far fa-clock fa-4x"></i>
-            <div class="counter" data-target="13500">0</div>
+            <div class="counter" data-target="1200">0</div>
             <h3>Working Hours</h3>
         </div>
         <div>
             <i class="fas fa-gift fa-4x"></i>
-            <div class="counter" data-target="720">0</div>
+            <div class="counter" data-target="18">0</div>
             <h3>Completed Projects</h3>
         </div>
         <div>
             <i class="fas fa-users fa-4x"></i>
-            <div class="counter" data-target="480">0</div>
+            <div class="counter" data-target="14">0</div>
             <h3>Happy Clients</h3>
         </div>
         <div>
             <i class="fas fa-award fa-4x"></i>
-            <div class="counter" data-target="120">0</div>
+            <div class="counter" data-target="1">0</div>
             <h3>Awards Received</h3>
         </div>
     </div>
@@ -121,20 +155,20 @@
         <div class="section-head-1 col-sm-12" style="text-align: center;">
           <h4 style="margin-top: -5rem;" id="portfolio"><span>Our</span> Projects</h4>
           
-          <p>The objective of IT Company is to enable a large number of youth to take up <br>industry-relevant skill training that will help them<br> in securing a better livelihood.
+          <p>The objective of Cyber Tekk Solutions is to enable a large number of youth to take up <br>industry-relevant skill training that will help them<br> in securing a better livelihood.
             </p>
         </div>
         
-        <div class="col-lg-4 col-sm-6">
+        <!-- <div class="col-lg-4 col-sm-6">
           
           <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span>
             <h6>Project-1</h6>
             
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.<br><br><br></p>
           </div>
-        </div>
+        </div> -->
         
-        <div class="col-lg-4 col-sm-6">
+        <!-- <div class="col-lg-4 col-sm-6">
           <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-upload"></i></span>
             <h6>Project-2</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.<br><br><br></p>
@@ -145,18 +179,18 @@
             <h6>Project-3</h6>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Aenean massa.<br><br><br></p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 </div>
 
 <div class="communicate">
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-    <p>Lorem ipsum dolor sit amet.</p>
+    <h3>Do you want your solutions to get digital?</h3>
+    <p>Let's do it, we are here for you!!</p>
     <a href="#contact"><button class="btn">Contact Now</button></a>
 </div>
 
-<div class="testimonials mt-100">
+<!-- <div class="testimonials mt-100">
     <div class="container">
         <div class="section-header" style="text-align: center;">
             <h2 style="margin-top: -15rem;">Testimonials</h2>
@@ -233,9 +267,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="clients mt-100">
+<!-- <div class="clients mt-100">
     <div class="container">
         <div class="section-header">
             <h2>Our Clients</h2>
@@ -254,7 +288,7 @@
             <img src="./images/image.png" alt="Client Logo">
         </div>
     </div>
-</div>
+</div> -->
 <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -271,71 +305,80 @@
   <div class="row">
       <div class="card">
           <div class="image">
-              <img src="./images/pexels-andrea-piacquadio-845434.jpg" alt="Team member 1">
+              <img src="./images/person.png" alt="Team member 1">
           </div>
           <div class="info">
-              <h3>Schott Watkins</h3>
+              <h3>Syed Wahaj Hashmi</h3>
+              <span>Project Manager</span>
+              <div class="icons">
+                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                  <!-- <a href="https://twitter.com/login" class="fab fa-twitter"></a> -->
+                  <!-- <a href="https://www.instagram.com/" class="fab fa-instagram"></a> -->
+                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="card">
+          <div class="image">
+              <img src="./images/murtaza.JPG" alt="Team member 1">
+          </div>
+          <div class="info">
+              <h3>Syed Murtaza</h3>
+              <span>Full Stack Developer</span>
+              <div class="icons">
+                  <a href="https://www.facebook.com/syed.murtaza.5059/" class="fab fa-facebook-f"></a>
+                  <a href="https://www.linkedin.com/in/syedmurtaza108/" class="fab fa-linkedin"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="card">
+          <div class="image">
+              <img src="./images/person.png" alt="Team member 1">
+          </div>
+          <div class="info">
+              <h3>Saif ur Raheem</h3>
+              <span>Sales Executive</span>
+              <div class="icons">
+                  <a href="https://www.facebook.com/profile.php?id=100007132145089" class="fab fa-facebook-f"></a>
+                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="card">
+          <div class="image">
+              <img src="./images/person.png" alt="Team member 1">
+          </div>
+          <div class="info">
+              <h3>Khubaib Waheed</h3>
               <span>Web Developer</span>
               <div class="icons">
                   <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
                   <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
               </div>
           </div>
       </div>
   </div>
   <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/pexels-vinicius-wiesehofer-1130624.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Nicole Bell</h3>
-              <span>Mobile Developer</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/pexels-hussein-altameemi-2776353.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>John Doe</h3>
-              <span>Graphic Designer</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="card">
-          <div class="image">
-              <img src="./images/pexels-andrea-piacquadio-745136.jpg" alt="Team member 1">
-          </div>
-          <div class="info">
-              <h3>Rose Matthews</h3>
-              <span>Web Designer</span>
-              <div class="icons">
-                  <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-                  <a href="https://twitter.com/login" class="fab fa-twitter"></a>
-                  <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
-                  <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="card">
+        <div class="image">
+            <img src="./images/person.png" alt="Team member 1">
+        </div>
+        <div class="info">
+            <h3>Sadiq Khan</h3>
+            <span>Mobile App Developer</span>
+            <div class="icons">
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
 <section id="contact" class="contact">
@@ -343,12 +386,12 @@
 </section>
 <div class="contact-in">
     <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711243.17762776!2d64.4398422293091!3d20.011408266548177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1644684739958!5m2!1sen!2sin" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57946125.29406327!2d-72.73366676656472!3d27.570243096178963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x25a3b1142c791a9%3A0xc4f8a0433288257a!2sUnited%20Kingdom!5e0!3m2!1sen!2sin!4v1726547688099!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="contact-form">
-        <form action="./contactme.php" method="POST">
+        <form id="contactForm" method="POST">
             <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="contact-form-phone">
+            <input type="tel" id="phone" name="phone" required placeholder="Contact number" class="contact-form-phone">
             <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
             <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
             <input type="submit" value="Submit" name="submit" class="contact-form-btn">
@@ -384,7 +427,7 @@
               <div class="accordion">
                   <div class="accordion-header">
                       <span>+</span>
-                      <h3>How do I associate with IT Company?</h3>
+                      <h3>How do I associate with Cyber Tekk Solutions?</h3>
                   </div>
                   <div class="accordion-body">
                       <p>The process begins when you contact us with your requirements. We analyze your requirements and respond to you. 
@@ -446,11 +489,11 @@
                   <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
                       <h4>Contact Us</h4>
                       <p>
-                          1300  Center Avenue<br>
-                          Fresno, California<br>
-                          United States <br>
-                          <strong>Phone:</strong> +123-456-7890<br>
-                          <strong>Email:</strong> info@example.com<br>
+                          **<br>
+                          **<br>
+                          UK <br>
+                          <strong>Phone:</strong> +92 311 8328159<br>
+                          <strong>Email:</strong> info@cybertekksolutions.com<br>
                       </p>
 
                       <div class="social-links">
@@ -466,7 +509,7 @@
                   <div class="col-lg-3 col-md-6 footer-newsletter">
                       <h4>Subscription</h4>
                       <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
-                      <form action="" method="post">
+                      <form id="contactForm" method="">
                           <input type="email" name="email"><input type="submit"  value="Subscribe">
                       </form>
                   </div>
@@ -478,7 +521,7 @@
       <div class="container">
           <div class="row align-items-center">
               <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                  Copyright &copy; 2021 IT Company Website. All Rights Reserved.
+                  Copyright &copy; 2024 Cyber Tekk Solutions Website. All Rights Reserved.
               </div>
           </div>
       </div>

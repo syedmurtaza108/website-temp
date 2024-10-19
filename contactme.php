@@ -1,4 +1,6 @@
 <?php   
+    echo "PHP file is working!";
+
     require("./mailing/mailfunction.php");
 
     $name = $_POST["name"];

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Company Website</title>
+    <title>Cyber Tekk Solutions</title>
     <link rel="stylesheet" href="./css/careers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -17,7 +17,35 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/main.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_prpDd3Z4cgVFqzneWnzZJ');
+            console.log('initiated')
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log('hello');
+                // these IDs from the previous steps
+                emailjs.send('service_57e0w7z','template_mmbi0ip',{
+                    'from_name': this.name.value,
+        'message': 'This message is for applying job',
+        'from_phone': this.phone.value,
+        'from_email': this.email.value,
+                }, 'user_prpDd3Z4cgVFqzneWnzZJ')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        alert('Job application has been sent successfully.')
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -43,11 +71,11 @@
 
     <section id="career-heading" class="career-heading">
         <h1 class="heading">Career</h1>
-        <p>Job Opening in IT Company. Apply Now!</p>
+        <p>Cyber Tekk Solutions. Apply Now!</p>
     </section>
     <div class="career">
         <div class="career-form">
-            <form action="./careers.php" method="POST" enctype="multipart/form-data">
+            <form id="contactForm" method="POST" enctype="multipart/form-data">
                 <input type="text" name="name" placeholder="Name" class="career-form-txt" required>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="career-form-phone">
                 <input type="email" name="email" placeholder="Email" class="career-form-email" required>
@@ -119,11 +147,11 @@
                     <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
                         <h4>Contact Us</h4>
                         <p>
-                            1300  Center Avenue<br>
-                            Fresno, California<br>
-                            United States <br>
-                            <strong>Phone:</strong> +123-456-7890<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            **<br>
+                            **<br>
+                            UK <br>
+                            <strong>Phone:</strong> +92 311 8328159<br>
+                            <strong>Email:</strong> info@cybertekksolutions.com<br>
                         </p>
   
                         <div class="social-links">
@@ -139,7 +167,7 @@
                     <div class="col-lg-3 col-md-6 footer-newsletter">
                         <h4>Subscription</h4>
                         <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
-                        <form action="" method="post">
+                        <form action="" method="Get">
                             <input type="email" name="email"><input type="submit"  value="Subscribe">
                         </form>
                     </div>
@@ -151,7 +179,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                    Copyright &copy; 2021 IT Company Website. All Rights Reserved.
+                    Copyright &copy; 2024 Cyber Tekk Solutions. All Rights Reserved.
                 </div>
             </div>
         </div>
